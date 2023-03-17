@@ -22,4 +22,4 @@ Place all web content in the `./app/public` folder.
 
 ## Notes
 
-Use `root:dev` to login as administrator in phpMyAdmin.# docker-php-dev-environment
+Use `root:dev` to login as administrator in phpMyAdmin.
