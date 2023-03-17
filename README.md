@@ -8,8 +8,8 @@ Development setup with Nginx, PHP-FPM, phpMyAdmin, MySQL and Mailhog.
 - **MySQL**: `3306`
 - **phpMyAdmin**: `8180`
 - **Mailhog**:
-    - **SMTP**: `1025`
-    - **Web UI**: `8280`
+  - **SMTP**: `1025`
+  - **Web UI**: `8280`
 
 ## Structure
 
@@ -18,7 +18,7 @@ Place all web content in the `./app/public` folder.
 ## First Time setup
 
 1. `docker compose build`
-2. `docker compose build [-d]`
+2. `docker compose up [-d]`
 
 ## Notes
 
