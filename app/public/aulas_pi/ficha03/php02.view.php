@@ -17,11 +17,11 @@ require_once('html_helpers.php');
     <form action="php02.php" method="get">
         <div>
             <label>Lines</label>
-            <input type="text" name="lines">
+            <input type="text" name="lines" value="<?php echo $lines; ?>">
         </div>
         <div>
             <label>Columns</label>
-            <input type="text" name="columns">
+            <input type="text" name="columns" value="<?php echo $columns; ?>">
         </div>
         <div>
             <input type="submit" value="OK">
