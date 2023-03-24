@@ -38,9 +38,30 @@ require_once('html_helpers.php');
     </form>
     <hr>
     <ul class="shortcuts">
-        <li><a href="php04.php?lines=4&columns=4&operation=*">4 x 4</a></li>
-        <li><a href="php04.php?lines=5&columns=10&operation=*">5 x 10</a></li>
-        <li><a href="php04.php?lines=10&columns=10&operation=*">10 x 10</a></li>
+        <li>
+            <form action="php04.php" method="post">
+                <input type="hidden" name="lines" value="4">
+                <input type="hidden" name="columns" value="4">
+                <input type="hidden" name="operation" value="*">
+                <input type="submit" value="4 x 4">
+            </form>
+        </li>
+        <li>
+            <form action="php04.php" method="post">
+                <input type="hidden" name="lines" value="5">
+                <input type="hidden" name="columns" value="10">
+                <input type="hidden" name="operation" value="*">
+                <input type="submit" value="5 x 10">
+            </form>
+        </li>
+        <li>
+            <form action="php04.php" method="post">
+                <input type="hidden" name="lines" value="10">
+                <input type="hidden" name="columns" value="10">
+                <input type="hidden" name="operation" value="*">
+                <input type="submit" value="10 x 10">
+            </form>
+        </li>
     </ul>
     <hr>
 
