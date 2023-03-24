@@ -17,19 +17,19 @@ require_once('html_helpers.php');
     <form action="php03.php" method="get">
         <div>
             <label>Lines</label>
-            <input type="text" name="lines">
+            <input type="text" name="lines" value="<?php echo $lines; ?>">
         </div>
         <div>
             <label>Columns</label>
-            <input type="text" name="columns">
+            <input type=" text" name="columns" value="<?php echo $columns; ?>">
         </div>
         <div>
             <label>Operation</label>
             <select name="operation">
-                <option value="*" selected="selected">Multiplication</option>
-                <option value="+">Addition</option>
-                <option value="/">Division</option>
-                <option value="-">Subtraction</option>
+                <option value="*" <?php echo isSelected($operation, '*') ?>>Multiplication</option>
+                <option value="+" <?php echo isSelected($operation, '+') ?>>Addition</option>
+                <option value="/" <?php echo isSelected($operation, '/') ?>>Division</option>
+                <option value="-" <?php echo isSelected($operation, '-') ?>>Subtraction</option>
             </select>
         </div>
         <div>

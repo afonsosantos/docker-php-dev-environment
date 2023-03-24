@@ -51,3 +51,8 @@ function error($errors, $name)
     $error = $errors[$name];
     include('error.view.php');
 }
+
+function isSelected($current, $expected)
+{
+    return $current == $expected ? 'selected' : '';
+}

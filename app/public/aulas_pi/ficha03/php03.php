@@ -1,6 +1,7 @@
 <?php
 $lines = "";
 $columns = "";
+$operation = "";
 
 if (
     isset($_GET["lines"])
@@ -9,7 +10,7 @@ if (
 ) {
     $lines = $_GET["lines"];
     $columns = $_GET["columns"];
-    $operation = $_GET["operation"];
+    $operation = $_GET["operation"] ?? "*";
 }
 
 require("php03.view.php");
