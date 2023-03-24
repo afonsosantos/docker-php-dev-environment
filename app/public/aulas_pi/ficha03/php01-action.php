@@ -1,5 +1,12 @@
 <?php
 require_once('html_helpers.php');
+
+// validate GET input
+$lines = $_GET["lines"];
+$columns = $_GET["columns"];
+
+$safeLines = filter_var($lines, FILTER_VALIDATE_INT);
+$safeColumns = filter_var($columns, FILTER_VALIDATE_INT);
 ?>
 <!doctype html>
 <html>
@@ -12,7 +19,13 @@ require_once('html_helpers.php');
 
 <body>
     <h1>Numbers Table</h1>
-    <?php echo times_table_view($lines = $_GET["lines"], $cols = $_GET["columns"]); ?>
+    <?php
+    if ($safeLines !== false and $safeColumns !== false) {
+        echo times_table_view($safeLines, $safeColumns);
+    } else {
+        echo "Values are not integers!";
+    }
+    ?>
 </body>
 
 </html>
