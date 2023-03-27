@@ -14,20 +14,20 @@ services:
       context: .
       dockerfile: PHP.Dockerfile
     volumes:
-        - ./app:/app
-        - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+      - ./app:/app
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
 
   mysql:
     image: mariadb:latest
     environment:
-        MYSQL_ROOT_PASSWORD: 'dev'
-        MYSQL_USER: 'dev'
-        MYSQL_PASSWORD: 'dev'
-        MYSQL_DATABASE: 'development'
+      MYSQL_ROOT_PASSWORD: "dev"
+      MYSQL_USER: "dev"
+      MYSQL_PASSWORD: "dev"
+      MYSQL_DATABASE: "development"
     volumes:
-        - mysqldata:/var/lib/mysql
+      - mysqldata:/var/lib/mysql
     ports:
-        - 3306:3306
+      - 3306:3306
 
   phpmyadmin:
     image: phpmyadmin:latest
@@ -41,10 +41,10 @@ services:
   mailhog:
     image: mailhog/mailhog:latest
     logging:
-      driver: 'none' # disable saving logs
+      driver: "none" # disable saving logs
     ports:
       - 1025:1025 # SMTP server
       - 8280:8025 # web interface
 
 volumes:
-    mysqldata: {}
+  mysqldata: {}
