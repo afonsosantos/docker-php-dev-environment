@@ -18,7 +18,7 @@ Place all web content in the `./app/public` folder.
 ## First Time setup
 
 1. `docker compose build`
-2. `docker compose build [-d]`
+2. `docker compose up [-d]`
 
 ## Notes
 
